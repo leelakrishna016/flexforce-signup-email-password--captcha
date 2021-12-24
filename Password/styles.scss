@@ -1,0 +1,191 @@
+//importing  global styles and bootstrap
+@import '../../../../styles/styles.scss';
+
+.passwordFormContainer {
+  margin: 20px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  white-space: pre-line;
+
+  & .errorText {
+    @include font-Family-Style-Weight-Size(roboto, bold, 14px);
+    color: $danger;
+    margin: 0;
+  }
+  & div {
+    width: 93%;
+    @media screen and (min-width: map-get($grid-breakpoints, 'sm')) {
+      width: 56.46%;
+      max-width: 426px;
+    }
+    @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+      width: 90.26%;
+      max-width: 426px;
+    }
+    @media screen and (min-width: map-get($grid-breakpoints, 'xl')) {
+      width: 68.7%;
+      max-width: 426px;
+    }
+
+    & p {
+      @include font-Family-Style-Weight-Size(Inter, bold, 16px);
+      line-height: 29px;
+      color: $regular;      
+      @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+        font-size: 25px;
+      }
+      @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+        font-size: 30px;
+        color: $bold_heading_color;
+      }
+    }
+    & .emailID {
+      @include font-Family-Style-Weight-Size(roboto, bold, 14px);
+      color: $regular;
+      margin: 0;
+      padding: 0;
+      @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+        font-size: 17px;
+        color: $bold_heading_color;
+      }
+    }
+
+    & label {
+      @include font-Family-Style-Weight-Size(Inter, 500, 14px);
+      line-height: 19px;
+      color: $regular;
+      margin: 5px 0 0 0;
+      @media screen and (min-width: map-get($grid-breakpoints, 'sm')) {
+        font-size: 16px;
+      }
+      @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+        color: $normal_font_color_lite;
+      }
+    }
+  }
+
+  input {
+    min-width: 220px;
+    width: 93%;
+    max-height: 44px;
+    background: rgba(138, 138, 138, 0.5);
+    border: 1px solid $regular;
+    margin: 6px 0 0 0;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+    outline: none;
+
+    @include font-Family-Style-Weight-Size(Inter, 500, 12px);
+    line-height: 17px;
+    color: $regular;
+    padding: 20px;
+
+    @media screen and (min-width: map-get($grid-breakpoints, 'sm')) {
+      width: 56.46%;
+      max-width: 426px;
+      font-size: 12px;
+    }
+    @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+      width: 90.26%;
+      max-width: 426px;
+      border: 1px solid $input_border_color;
+      background-color: transparent;
+      box-shadow: none;
+      color: $normal_font_color_lite;
+    }
+
+    &::placeholder {
+      color: $regular;
+      @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+        color: $normal_font_color_lite;
+      }
+    }
+    &.error {
+      border: 1px solid $danger;
+    }
+  }
+  & i {
+    position: relative;
+    top: -35px;
+    left: 35%;
+    color: $regular;
+    @media screen and (min-width: map-get($grid-breakpoints, 'sm')) {
+      left: 20%;
+    }
+    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
+      left: 23%;
+    }
+    @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+      color: $bold_heading_color;
+      left: 35%;
+    }
+    @media screen and (min-width: map-get($grid-breakpoints, 'xl')) {
+      left: 27%;
+    }
+  }
+
+  & .passwordHint {
+    & .hintOption {
+      @include font-Family-Style-Weight-Size(Inter, 500, 16px);
+      line-height: 10px;
+      align-items: center;
+      color: $regular;
+      @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+        color: $normal_font_color_lite;
+      }
+    }
+    & .list {
+      padding-left: 15px;
+      color: $regular;
+      @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+        color: $normal_font_color_dark;
+      }
+      & .green {
+        color: $green_color;
+        @media screen and (max-width: map-get($grid-breakpoints, 'lg')) {
+          color: $green_color;
+          font-weight: bold;
+        }
+      }
+    }
+
+    & .list span {
+      @include font-Family-Style-Weight-Size(Inter, 500, 15px);
+      color: $regular;
+      line-height: 18px;
+      /* margin-left: 5px; */
+      @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+        color: $input_border_color;
+      }
+    }
+  }
+
+  button {
+    min-width: 220px;
+    width: 93%;
+    min-height: 44px;
+    background: $global_color;
+    border: 0;
+    border-radius: 6px;
+    margin: 10px 0 0 0;
+    outline: none;
+
+    color: $regular;
+    @include font-Family-Style-Weight-Size(Inter, 500, 17px);
+    line-height: 21px;
+
+    @media screen and (min-width: map-get($grid-breakpoints, 'sm')) {
+      width: 56.46%;
+      max-width: 426px;
+    }
+    @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
+      width: 90.26%;
+      max-width: 426px;
+    }
+  }
+  @media screen {
+  }
+}
